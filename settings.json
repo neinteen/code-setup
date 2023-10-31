@@ -46,7 +46,7 @@
   // Font
   "editor.fontLigatures": true,
   "editor.fontFamily": "CommitMono-C",
-  // These two fix the blurriness and sizing issues on high dpi displays
+  // These two fix the blurriness and sizing issues on high dpi displays (not needed on mac)
   "editor.fontSize": 13,
   "editor.fontWeight": "350",
 
