@@ -1,0 +1,174 @@
+{
+  /* VSCode ---------------------------------------------------------------- */
+
+  // UX adjustments
+  "update.mode": "start",
+  "editor.formatOnSave": true,
+  "editor.linkedEditing": true,
+  "editor.suggest.preview": true,
+  // Don't remember ever settings this, tho it did look good
+  // Trying without it rn
+  // "editor.lineHeight": 19,
+  "explorer.confirmDelete": false,
+  "editor.cursorBlinking": "phase",
+  "editor.quickSuggestionsDelay": 2,
+  "editor.stickyScroll.enabled": true,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.colorTheme": "Tokyo Night",
+  "extensions.ignoreRecommendations": true,
+  "security.workspace.trust.enabled": false,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "security.workspace.trust.untrustedFiles": "open",
+  "security.workspace.trust.startupPrompt": "never",
+  // LIFE SAVER!!! Prevents autocomplete from dieing when snippets are filled in.
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  // Prevents annoying PowerShell
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  // Honestly, can't say i ever noticed this
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+
+  // Statusbar coloring
+  // If you change these, change the vim yank coloring too.
+  "workbench.colorCustomizations": {
+    "statusBar.foreground": "#FFFFFF",
+    "statusBar.background": "#b53978",
+    "statusBar.noFolderBackground": "#b53978",
+    "statusBar.debuggingBackground": "#b53978",
+    "statusBarItem.remoteBackground": "#b53978"
+  },
+
+  // Git settings (for work only)
+  //"git.enabled": false,
+  //"git.path": null,
+  //"git.autofetch": false,
+  "git.enableSmartCommit": true,
+
+  // Font
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "CommitMono-C",
+  // These two fix the blurriness and sizing issues on high dpi displays
+  "editor.fontSize": 13,
+  "editor.fontWeight": "350",
+
+  // Default formatters
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  /* Plugin settings ------------------------------------------------------- */
+
+  // VIM
+  // Fixes unfolding when moving over folds
+  "vim.foldfix": true,
+  "vim.startInInsertMode": true,
+  // Fixes annoying vim registers
+  "vim.useSystemClipboard": true,
+  // Adds color when yanking
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.textColor": "#FFFFFF",
+  "vim.highlightedyank.duration": 250,
+  "vim.highlightedyank.color": "#b53978",
+  // Remap esc to jk (might need ESC on mac)
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<esc>"]
+    }
+  ],
+
+  // Spell check
+  "cSpell.language": "en,de-DE",
+
+  // Rust-Analyzer
+  "rust-analyzer.typing.autoClosingAngleBrackets.enable": true,
+
+  // Live Sass Compiler
+  "liveSassCompile.settings.watchOnLaunch": true,
+  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "/dist",
+      "savePathReplacementPairs": null
+    }
+  ],
+  "liveSassCompile.settings.useNewCompiler": true,
+
+  // Code-runner
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+    "c": "cd $dir && clang main.c -o main.o && main.o",
+    "cpp": "cd $dir && clang++ -Wall -std=c++20 main.cpp -o main.o && main.o"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "cmake.configureOnOpen": true,
+  "files.associations": {
+    "*.h": "c"
+  },
+
+  // Comment Anchors
+  "commentAnchors.tags.anchors": {
+    "OPTIMIZATION": {
+      "iconColor": "orange",
+      "highlightColor": "#FFB300",
+      "scope": "file"
+    },
+    "SAFETY": {
+      "iconColor": "pink",
+      "highlightColor": "#b53978",
+      "scope": "file"
+    },
+    "ANCHOR": {
+      "iconColor": "default",
+      "highlightColor": "#A8C023",
+      "scope": "file"
+    },
+    "TODO": {
+      "iconColor": "blue",
+      "highlightColor": "#3ea8ff",
+      "scope": "workspace"
+    },
+    "FIXME": {
+      "iconColor": "red",
+      "highlightColor": "#F44336",
+      "scope": "workspace"
+    },
+    "STUB": {
+      "iconColor": "purple",
+      "highlightColor": "#BA68C8",
+      "scope": "file"
+    },
+    "NOTE": {
+      "iconColor": "orange",
+      "highlightColor": "#FFB300",
+      "scope": "file"
+    },
+    "REVIEW": {
+      "iconColor": "green",
+      "highlightColor": "#64DD17",
+      "scope": "workspace"
+    },
+    "SECTION": {
+      "iconColor": "blurple",
+      "highlightColor": "#896afc",
+      "scope": "workspace",
+      "behavior": "region"
+    },
+    "LINK": {
+      "iconColor": "#2ecc71",
+      "highlightColor": "#2ecc71",
+      "scope": "workspace",
+      "behavior": "link"
+    }
+  }
+}
