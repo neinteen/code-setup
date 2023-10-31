@@ -1,0 +1,13 @@
+# https://github.com/sagiegurari/cargo-make
+
+[env]
+CARGO_MAKE_EXTEND_WORKSPACE_MAKEFILE = true # Needed for workspaces
+
+
+[config]
+# Turns off extending core tasks.
+# Basically, if you create a task called run with some options,
+# it would run the core task "run" with your options added to it,
+# instead of just running your task with the provided settings.
+# This can cause unwanted behaivior and also is just annoying.
+skip_core_tasks = true
