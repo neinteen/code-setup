@@ -27,3 +27,6 @@ These are the extensions I use:
 23. TabOut
 24. Vim
 25. YAML
+26. Deno
+27. Catppuccin + Icons
+
